@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(#2a2a2a, #000000);
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+.main-div {
+    height: 90vh;
+    width: 75vh;
+    background-color: #121212;
+    margin: 0;
+    border-radius: 8px;
+    color: white;
+    padding: 22px 0; /* Adicionando um padding no topo e na base */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn {
+    border-color: #585858;
+    border-radius: 40px;
+    background-color: transparent;
+    color: white;
+    font-weight: 800;
+    width: 20rem;
+}
+
+.btn:hover {
+    border: solid 2px white;
+    background-color: transparent;
+    color: white;
+}
+
+h1 {
+    font-weight: 800;
+}
