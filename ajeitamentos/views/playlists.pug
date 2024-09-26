@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous")
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+    link(rel="stylesheet", href="/stylesheets/playlist.css")
+    link(rel="stylesheet", href="/stylesheets/header.css")
+    link(rel="stylesheet", href="/stylesheets/footer.css")
+    title Example - Spotify
+    link(rel="icon", href="imagens/favicon.png")
+  body
+    include components/header
+    h1 Playlists Mais Ouvidas
+
+    .artists-div.container-fluid.align-items-center
+      each artist in artists
+        .card
+          if artist && artist.images && artist.images.length > 0
+              img(src=artist.images[0].url, alt=artist.name)
+          else
+            | No image available
+            h2= artist.name
+          if artist.genres && artist.genres.length > 0
+            p Genres: #{artist.genres.join(', ')}
+          else
+            p Genres: Not available
+            p Popularity: #{artist.popularity}
+          if artist.mostListenedAlbum
+            h3 Most Listened Album: #{artist.mostListenedAlbum.name}
+            img(src=artist.mostListenedAlbum.images[0].url, alt=artist.mostListenedAlbum.name, style='max-height: 150px; width: auto; border-radius: 8px; margin-top: 10px;')
+            a(href=artist.mostListenedAlbum.external_urls.spotify, target='_blank') View on Spotify
+          else
+            p Most Listened Album: Not available
+
+    include components/footer

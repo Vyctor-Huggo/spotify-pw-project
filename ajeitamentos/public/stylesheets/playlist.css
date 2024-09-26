@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 900;
+}
+
+body {
+    background: radial-gradient(circle, #2a2a2a, #000000);
+    background-size: cover;
+    height: max-content;
+    margin: 0;  
+
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+.artists-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    color: white;
+
+
+    width: 20vw;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: rgba(93, 93, 93, 0.3);
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center;    /* Centraliza horizontalmente */
+    text-align: center;     /* Centraliza o texto */
+}
+
+.card img {
+    max-height: 200px;
+    width: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Espaço entre a imagem e o título */
+}
+
+.card a {
+    margin-top: 10px; /* Espaço acima do link */
+    color: #1DD760; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.card a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
