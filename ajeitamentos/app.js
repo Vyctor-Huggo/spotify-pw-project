@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = process.env.port;
 
 // Middleware para usar Pug e cookies
 app.set('view engine', 'pug');
@@ -36,7 +36,7 @@ const generateRandomString = length => {
 
 // Rota para exibir a página inicial
 app.get('/', (req, res) => {
-  res.render('index');
+  res.redirect('/home')
 });
 
 app.get('/home', (req, res) => {

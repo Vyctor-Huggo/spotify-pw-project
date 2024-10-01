@@ -12,6 +12,9 @@ html
     link(rel="icon", href="imagens/favicon.png")
   body
     include components/header
+    <br>
+    <br>
+    <br>
     h1 Playlists Mais Ouvidas
 
     .artists-div.container-fluid.align-items-center
@@ -28,7 +31,7 @@ html
             p Genres: Not available
             p Popularity: #{artist.popularity}
           if artist.mostListenedAlbum
-            h3 Most Listened Album: #{artist.mostListenedAlbum.name}
+            h3 <b>Most Listened Album:</b> #{artist.mostListenedAlbum.name}
             img(src=artist.mostListenedAlbum.images[0].url, alt=artist.mostListenedAlbum.name, style='max-height: 150px; width: auto; border-radius: 8px; margin-top: 10px;')
             a(href=artist.mostListenedAlbum.external_urls.spotify, target='_blank') View on Spotify
           else
